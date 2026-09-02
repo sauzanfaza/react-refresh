@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CounterButton from './CounterButton';
 
 export default function Counter({ initialValue, step }) {
   const [counter, setCounter] = useState(initialValue);
+
+  useEffect(() => {
+      console.log('counter jalan')
+  }, [counter])
 
   return (
     <div>
