@@ -9,9 +9,10 @@ export default function Counter({ initialValue, step }) {
   }, [counter])
 
   return (
-    <div>
-      <h1>{counter}</h1>
+    <div className='flex flex-col items-center p-4'>
+      <h1 className='text-3xl font-semibold mb-4'>{counter}</h1>
 
+      <div className='flex gap-2 mb-4'>
       <CounterButton
         disabled={counter === 10}
         onClick={() => setCounter(counter + step)}
@@ -32,6 +33,7 @@ export default function Counter({ initialValue, step }) {
       >
         -
       </CounterButton>
+      </div>
     </div>
   );
 }
